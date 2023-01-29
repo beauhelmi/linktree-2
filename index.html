@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burhanuddin Helmi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Saira:wght@800&display=swap"
-        rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Burhanuddin Helmi</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Saira:wght@800&display=swap"
+            rel="stylesheet">
 
-    <style>
+        <style>
         * {
             box-sizing: border-box;
             margin: 0;
@@ -47,6 +48,171 @@
             width: 100%;
         }
 
+        body > .container {
+  background: radial-gradient(ellipse at center, #8d93a0 0%, #404149 100%);
+}
+main {
+  width: 16rem;
+  margin: 10rem auto;
+  background: rgba(255,255,255,0.8);
+  border-radius: 0.2rem;
+  padding: 1rem;
+  color: #333;
+}
+#name {
+  font-family: "Poppins", "Sans-serif";
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+  margin-top: auto;
+  color: white;
+}
+#name2 {
+  font-family: "Poppins", "Sans-serif";
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+.info {
+  font-family: "Roboto Condensed", "Arial";
+  font-size: 1.08rem;
+  margin-bottom: 1.8rem;
+}
+#circle {
+  display: block;
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  margin: -5rem auto 0 auto;
+  text-align: center;
+  overflow: hidden;
+  perspective: 1200px;
+}
+#circle:hover #circle-flip {
+  transform: rotateY(180deg);
+}
+@keyframes flip {
+  10% {
+    transform: rotateY(180deg);
+  }
+  90% {
+    transform: rotateY(180deg);
+  }
+}
+#circle-flip {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 500ms;
+  animation: flip 3s;
+  animation-delay: 0.5s;
+}
+.front, .back, .bottom {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+#circle .front {
+  background: url("https://avatars.githubusercontent.com/u/110883969?v=4") #DDD;
+  background-size: cover;
+  border-radius: 50%;
+}
+#circle .back {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/106891/email.png") #FFF;
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: center 35%;
+  line-height: 11rem;
+  color: #666;
+  font-family: "Roboto Condensed", "Arial";
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.08rem;
+  border-radius: 50%;
+  transform: rotateY(180deg);
+}
+.button-container {
+  position: relative;
+  perspective: 1200px;
+}
+.button {
+  display: block;
+  height: 3.5rem;
+  width: 13rem;
+  margin: 0 auto 1.4rem auto;
+  transform-style: preserve-3d;
+  transform-origin: 50% 25px -25px; 
+  transition: all 300ms;
+  animation: underflip 3s;
+  animation-delay: 4s;
+}
+.button:hover {
+  transform: rotateX(90deg);
+}
+@keyframes underflip {
+  10% {
+    transform: rotateX(90deg);
+  }
+  90% {
+    transform: rotateX(90deg);
+  }
+}
+.first.button .front {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/106891/codepen.png") #BBB;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.first.button .bottom {
+  background: #666;
+  white-space: nowrap;
+}
+.first.button .bottom::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: -10px;
+}
+.first.button .bottom span {
+  color: #FFF;
+  font-family: "Roboto Condensed", "Arial";
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.07rem;
+  vertical-align: middle;
+  display: inline-block;
+  white-space: normal;
+  padding: 0.3rem;
+}
+.button .bottom {
+  transform: rotateX(-90deg) translateY(25px) translateZ(25px);
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  font-family: "Roboto Condensed", "Arial";
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.3);
+}
+
+@media all and (min-width: 1800px), (min-resolution: 192dpi) {
+  html {
+    font-size: 150%;
+  }
+}
+
         section {
             display: grid;
             place-items: center;
@@ -63,7 +229,6 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 10px;
-            justify-content: center;
             align-items: center;
         }
 
@@ -83,7 +248,7 @@
             width: 100%;
             align-items: center;
             justify-content: center;
-            border: 1.5px solid white;
+            border: none;
             padding: 10px;
             color: white;
             text-decoration: none;
@@ -94,7 +259,7 @@
         }
 
         a:hover {
-            background: white;
+            background: none;
             color: #0f172a;
         }
 
@@ -104,42 +269,55 @@
 
 
     </style>
-</head>
+    </head>
 
-<body>
-    <img src="https://images.unsplash.com/photo-1508020268086-b96cf4f4bb2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="bg" />
-    <section>
-        <div>
-            <img src="https://avatars.githubusercontent.com/u/110883969?v=4" alt="dp" />
-            <h2>Burhanuddin Helmi</h2>
+    <body>
+        <img
+            src="https://images.unsplash.com/photo-1508020268086-b96cf4f4bb2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="bg" />
+        <section>
             <div>
-                <a href="https://www.linkedin.com/in/burhanuddin-helmi-bin-ramli/">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <p>LinkedIn</p>
-                </a>
-                <a href="https://github.com/beauhelmi">
-                    <i class="fa-brands fa-github"></i>
-                    <p>Github</p>
-                </a>
-                <a href="https://www.instagram.com/beauhelmi">
-                    <i class="fa-brands fa-instagram"></i>
-                    <p>Instagram</p>
-                </a>
-                <a href="https://twitter.com/b34u_helmi">
-                    <i class="fa-brands fa-twitter"></i>
-                    <p>Twitter</p>
-                </a>
-                <a href="https://www.facebook.com/beaucorp.helmi.5">
-                    <i class="fa-brands fa-facebook"></i>
-                    <p>Facebook</p>
-                </a>
-                <a href="">
-                    <i class="fa-brands fa-address-card"></i>
-                    <p>Address</p>
-                </a>
+                <a href="mailto:beauhelmi@gmail.com" id="circle">
+                    <div id="circle-flip">
+                      <div class="front">
+                        
+                      </div>
+                      <div class="back">
+                        Email Me
+                      </div>
+                    </div>
+                  </a>
+                  <h1 id="name">Burhanuddin Helmi<h1/>
+                    <p id="name2">Front-end developer with no formal training who doubles as a parenting guru and is prepared to take on the world of remote web development!</p>
+                <div>
+                    <a
+                        href="https://www.linkedin.com/in/burhanuddin-helmi-bin-ramli/">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <p>LinkedIn</p>
+                    </a>
+                    <a href="https://github.com/beauhelmi">
+                        <i class="fa-brands fa-github"></i>
+                        <p>Github</p>
+                    </a>
+                    <a href="https://www.instagram.com/beauhelmi">
+                        <i class="fa-brands fa-instagram"></i>
+                        <p>Instagram</p>
+                    </a>
+                    <a href="https://twitter.com/b34u_helmi">
+                        <i class="fa-brands fa-twitter"></i>
+                        <p>Twitter</p>
+                    </a>
+                    <a href="https://www.facebook.com/beaucorp.helmi.5">
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>Facebook</p>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-address-card"></i>
+                        <p>Address</p>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-</body>
+        </section>
+    </body>
 
 </html>
